@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return 'this is route test';
 });
+
+//Home route
+Route::get('/home', function () {
+    return 'this is home route';
+});
