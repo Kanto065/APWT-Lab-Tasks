@@ -23,5 +23,5 @@ Route::get('/test', function () {
 
 //Home route
 Route::get('/home', function () {
-    return 'this is home route';
+    return view('home');
 });
