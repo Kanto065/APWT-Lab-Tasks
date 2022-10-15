@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
 <div>
-    <h3>this is about page</h3>
+    <h3>This is contact info</h3>
 </div>
 @endsection
