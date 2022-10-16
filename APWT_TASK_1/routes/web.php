@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductControllerTwo;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,27 +22,25 @@ Route::get('/test', function () {
     return 'this is route test';
 });
 
-//Home route
+//__Home route
 Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-//product route
-Route::get('/product', function () {
-    return view('products');
-})->name('products');
+//__product route
+Route::get('/products', [ProductControllerTwo::class, 'index'])->name('products');
 
-//our teams route
+//__our teams route
 Route::get('/ourTeams', function () {
     return view('ourTeams');
 })->name('our.teams');
 
-//about us route
+//__about us route
 Route::get('/about', function () {
     return view('about');
 })->name('about.us');
 
-//contact us route
+//__contact us route
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact.us');
