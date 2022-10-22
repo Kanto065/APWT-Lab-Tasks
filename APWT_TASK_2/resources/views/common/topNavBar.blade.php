@@ -4,5 +4,7 @@
 <a class="btn btn-primary" href="{{route('our.teams')}}">Our Teams</a>
 <a class="btn btn-primary" href="{{route('about.us')}}">About us</a>
 <a class="btn btn-primary" href="{{route('contact.us')}}">Contact us</a>
+<a class="btn btn-primary" href="{{route('log.in')}}">Log in</a>
+<a class="btn btn-primary" href="{{route('registration')}}">Registration</a>
 
 </html>

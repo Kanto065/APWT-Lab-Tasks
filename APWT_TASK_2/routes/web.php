@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductControllerTwo;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,13 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact.us');
+
+//__log in route
+Route::get('/login', function () {
+    return view('logIn');
+})->name('log.in');
+
+//__registration route
+Route::get('/registration', [RegistrationController::class, 'register'])->name('registration');
+
+Route::post('/registration', [RegistrationController::class, 'registerSubmit'])->name('registration');
