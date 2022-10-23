@@ -10,6 +10,7 @@ class RegistrationController extends Controller
     {
         return view('registration');
     }
+
     public function registerSubmit(Request $request)
     {
         $validated = $request->validate([
@@ -22,6 +23,6 @@ class RegistrationController extends Controller
             // 'terms' => 'accepted'
         ]);
 
-        // return $request;
+        return redirect()->route('log.in');
     }
 }
