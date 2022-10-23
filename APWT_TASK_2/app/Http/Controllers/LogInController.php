@@ -20,8 +20,6 @@ class LogInController extends Controller
         $users = array("kanto@mail.com" => "1234", "admin@mail.com" => "admin", "blackadam@mail.com" => "blackadam");
 
         if ($validated) {
-
-
             foreach ($users as $email => $pass) {
                 if ($request->email == $email && $request->password == $pass) {
                     return redirect()->route('home');

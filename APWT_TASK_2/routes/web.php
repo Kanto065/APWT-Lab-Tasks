@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LogInController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductControllerTwo;
@@ -43,9 +44,9 @@ Route::get('/about', function () {
 })->name('about.us');
 
 //__contact us route
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact.us');
+Route::get('/contact', [ContactUsController::class, 'show'])->name('contact.us');
+
+Route::post('/contact', [ContactUsController::class, 'submitted'])->name('contact.us');
 
 //__log in route
 Route::get('/login', [LogInController::class, 'login'])->name('log.in');
